@@ -1,0 +1,1 @@
+/home/asus/Ros/robot_ws/devel/.private/robot_viz/share/robot_viz/cmake/robot_vizConfig-version.cmake

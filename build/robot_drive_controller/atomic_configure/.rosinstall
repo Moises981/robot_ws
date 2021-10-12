@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/asus/Ros/robot_ws/devel/.private/robot_drive_controller/setup.sh

@@ -1,0 +1,124 @@
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool robot_drive_controller::RobotDriveController::init(hardware_interface::VelocityJointInterface*, ros::NodeHandle&, ros::NodeHandle&)[m[K’:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::subscribe<geometry_msgs::Twist>(const char [8], int, void (robot_drive_controller::RobotDriveController::*)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr), robot_drive_controller::RobotDriveController*)[m[K’
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;31m[K)[m[K;
+      |                                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), T*, const ros::TransportHints&)[m[K’
+  402 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M), T* obj,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >[m[K’ and ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >[m[K’}
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, T*, const ros::TransportHints&)[m[K’
+  413 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const, T* obj,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(geometry_msgs::Twist_<std::allocator<void> >) const[m[K’ and ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} have incompatible cv-qualifiers
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), T*, const ros::TransportHints&)[m[K’
+  465 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&[m[K’ and ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >[m[K’}
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, T*, const ros::TransportHints&)[m[K’
+  475 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&) const[m[K’ and ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} have incompatible cv-qualifiers
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+  529 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M),
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >[m[K’ and ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >[m[K’}
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+  540 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(geometry_msgs::Twist_<std::allocator<void> >) const[m[K’ and ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} have incompatible cv-qualifiers
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+  594 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&[m[K’ and ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >[m[K’}
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+  605 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&) const[m[K’ and ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} have incompatible cv-qualifiers
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/controller_interface/controller.h:35[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/include/robot_drive_controller/robot_drive_controller.h:2[m[K,
+                 from [01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&) [with M = geometry_msgs::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int][m[K’
+  656 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(M), const TransportHints& transport_hints = TransportHints())
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 3 from ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} to ‘[01m[Kvoid (*)(geometry_msgs::Twist_<std::allocator<void> >)[m[K’
+  656 |   Subscriber subscribe(const std::string& topic, uint32_t queue_size, [01;36m[Kvoid(*fp)(M)[m[K, const TransportHints& transport_hints = TransportHints())
+      |                                                                       [01;36m[K~~~~~~^~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(const boost::shared_ptr<const M>&), const ros::TransportHints&) [with M = geometry_msgs::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int][m[K’
+  704 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(const boost::shared_ptr<M const>&), const TransportHints& transport_hints = TransportHints())
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 3 from ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’} to ‘[01m[Kvoid (*)(const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&)[m[K’
+  704 |   Subscriber subscribe(const std::string& topic, uint32_t queue_size, [01;36m[Kvoid(*fp)(const boost::shared_ptr<M const>&)[m[K, const TransportHints& transport_hints = TransportHints())
+      |                                                                       [01;36m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:750:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(const boost::shared_ptr<const M>&)>&, const VoidConstPtr&, const ros::TransportHints&) [with M = geometry_msgs::Twist_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int; ros::VoidConstPtr = boost::shared_ptr<const void>][m[K’
+  750 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (const boost::shared_ptr<M const>&)>& callback,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:751:50:[m[K [01;36m[Knote: [m[K  no known conversion for argument 4 from ‘[01m[Krobot_drive_controller::RobotDriveController*[m[K’ to ‘[01m[Kconst VoidConstPtr&[m[K’ {aka ‘[01m[Kconst boost::shared_ptr<const void>&[m[K’}
+  751 |                              [01;36m[Kconst VoidConstPtr& tracked_object = VoidConstPtr()[m[K, const TransportHints& transport_hints = TransportHints())
+      |                              [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class C> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(C)>&, const VoidConstPtr&, const ros::TransportHints&)[m[K’
+  799 |   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (C)>& callback,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:19:63:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::function<void(C)>[m[K’ and ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr)[m[K’ {aka ‘[01m[Kvoid (robot_drive_controller::RobotDriveController::*)(boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >)[m[K’}
+   19 |       "cmd_vel", 1, &RobotDriveController::cmdVelCallback,this[01;36m[K)[m[K;
+      |                                                               [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/robot_drive_controller.dir/build.make:63: CMakeFiles/robot_drive_controller.dir/src/robot_drive_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:592: CMakeFiles/robot_drive_controller.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

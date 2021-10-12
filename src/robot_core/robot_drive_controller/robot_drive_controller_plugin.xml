@@ -1,0 +1,7 @@
+<library path="lib/librobot_drive_controller">
+  <class name="robot_drive_controller/RobotDriveController" type="robot_drive_controller::RobotDriveController" base_class_type="controller_interface::ControllerBase">
+    <description>
+          This custom basic drive controller tracks velocity commands. It expects 2 VelocityJointInterface type of hardware interfaces.
+    </description>
+  </class>
+</library>

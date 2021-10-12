@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Load Config File in Ros Server -->
+    <rosparam file="$(find robot_control)/config/controller.yaml" command="load" />
+    <!-- Load parameters in controller manager node -->
+    <node name="spawn_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/robot" args="joint_state_controller robot_drive_controller" />
+</launch>

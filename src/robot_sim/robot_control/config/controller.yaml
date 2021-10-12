@@ -1,0 +1,10 @@
+robot:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 5.0
+  robot_drive_controller:
+    type: robot_drive_controller/RobotDriveController
+    left_wheel: left_wheel_axis_joint
+    right_wheel: right_wheel_axis_joint
+    wheel_radius: 0.0325
+    wheel_separation: 0.1926

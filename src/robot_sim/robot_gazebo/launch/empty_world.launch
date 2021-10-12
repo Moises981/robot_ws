@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Gazebo Settings -->
+    <arg name="gui" default="true"/>
+    <arg name="verbose" default="false"/>
+
+    <!-- Spawn Robot Coordinates -->
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
+    <arg name="z" default="0.0"/>
+
+    <!-- Robot Description Parameter -->
+    <include file="$(find robot_description)/launch/description.launch" />
+
+    <!-- Launch Gazebo : Empty World -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+    </include>
+
+    <!-- Spawn Robot -->
+    <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model robot -x $(arg x) -y $(arg y) -z $(arg z)"/>
+
+    <!-- Spawn Controller -->
+    <include file="$(find robot_control)/launch/spawn_control.launch" />
+
+
+</launch>
