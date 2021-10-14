@@ -1,8 +1,0 @@
-prefix=/home/asus/Ros/robot_ws/devel/.private/robot_control
-
-Name: robot_control
-Description: Description of robot_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

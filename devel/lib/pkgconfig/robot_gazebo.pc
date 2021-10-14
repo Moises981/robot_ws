@@ -1,1 +1,0 @@
-/home/asus/Ros/robot_ws/devel/.private/robot_gazebo/lib/pkgconfig/robot_gazebo.pc

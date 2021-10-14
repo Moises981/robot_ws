@@ -1,8 +1,0 @@
-prefix=/home/asus/Ros/robot_ws/install
-
-Name: robot_drive_controller
-Description: Description of robot_drive_controller
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

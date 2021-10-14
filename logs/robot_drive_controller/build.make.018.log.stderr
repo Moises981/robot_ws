@@ -1,8 +1,0 @@
-[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:[m[K In member function ‘[01m[Kvirtual void robot_drive_controller::RobotDriveController::update(const ros::Time&, const ros::Duration&)[m[K’:
-[01m[K/home/asus/Ros/robot_ws/src/robot_core/robot_drive_controller/src/robot_drive_controller.cpp:47:12:[m[K [01;31m[Kerror: [m[K‘[01m[KcmdVel_timeout_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcmd_vel_timeout_[m[K’?
-   47 |   if (dt > [01;31m[KcmdVel_timeout_[m[K) {
-      |            [01;31m[K^~~~~~~~~~~~~~~[m[K
-      |            [32m[Kcmd_vel_timeout_[m[K
-make[2]: *** [CMakeFiles/robot_drive_controller.dir/build.make:63: CMakeFiles/robot_drive_controller.dir/src/robot_drive_controller.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:592: CMakeFiles/robot_drive_controller.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
