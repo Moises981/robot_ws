@@ -1,5 +1,0 @@
-robot_sim/robot_viz
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_viz/cmake.lock /home/jescas/Desktop/Ros/robot_ws/devel/./cmake.lock
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_viz/share/robot_viz/cmake/robot_vizConfig-version.cmake /home/jescas/Desktop/Ros/robot_ws/devel/share/robot_viz/cmake/robot_vizConfig-version.cmake
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_viz/share/robot_viz/cmake/robot_vizConfig.cmake /home/jescas/Desktop/Ros/robot_ws/devel/share/robot_viz/cmake/robot_vizConfig.cmake
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_viz/lib/pkgconfig/robot_viz.pc /home/jescas/Desktop/Ros/robot_ws/devel/lib/pkgconfig/robot_viz.pc

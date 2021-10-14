@@ -1,2 +1,0 @@
-/home/asus/Ros/robot_ws/devel/./cmake.lock 367
-/home/jescas/Desktop/Ros/robot_ws/devel/./cmake.lock 5

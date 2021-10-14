@@ -1,5 +1,0 @@
-robot_sim/robot_gazebo
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_gazebo/cmake.lock /home/jescas/Desktop/Ros/robot_ws/devel/./cmake.lock
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_gazebo/share/robot_gazebo/cmake/robot_gazeboConfig.cmake /home/jescas/Desktop/Ros/robot_ws/devel/share/robot_gazebo/cmake/robot_gazeboConfig.cmake
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_gazebo/share/robot_gazebo/cmake/robot_gazeboConfig-version.cmake /home/jescas/Desktop/Ros/robot_ws/devel/share/robot_gazebo/cmake/robot_gazeboConfig-version.cmake
-/home/jescas/Desktop/Ros/robot_ws/devel/.private/robot_gazebo/lib/pkgconfig/robot_gazebo.pc /home/jescas/Desktop/Ros/robot_ws/devel/lib/pkgconfig/robot_gazebo.pc
