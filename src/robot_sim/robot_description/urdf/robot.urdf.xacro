@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+
+    <!-- Dependencies -->
+    <xacro:include filename="$(find robot_description)/urdf/components/*.xacro"/>
+    <xacro:include filename="$(find robot_description)/urdf/utils/*.xacro"/>
+
+    <!-- Dummy Link & Joint -->
+    <link name="dummy_link"/>
+
+    <joint name="dummy_joint" type="fixed">
+        <parent link="dummy_link"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <xacro:inertia_box m="0.05" x="0.161" y="0.17" z="0.0043"/>
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/chasis.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/chasis_coll.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Wheels -->
+    <xacro:wheel parent="base_link" suffix="right" reflect="-1" dir="right"/>
+    <xacro:wheel parent="base_link" suffix="left" reflect="1" dir="left"/>
+    <xacro:caster parent="base_link"/>
+
+    <!-- Addional items -->
+
+</robot>

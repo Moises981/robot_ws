@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="caster" params="parent">
+
+        <link name="caster_wheel_link">
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/caster.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 -0.0086"/>
+                <geometry>
+                    <sphere radius="0.007"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="caster_wheel_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="caster_wheel_link"/>
+            <origin xyz="0.0 0.078 -0.025"/>
+        </joint>
+
+        <link name="caster_stand_right_link">
+            <inertial>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <xacro:inertia_cylinder m="0.02" r="0.0028" h="0.0336"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/caster_stand.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.0028" length="0.0336"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="caster_stand_right_joint" type="fixed">
+            <parent link="caster_wheel_link"/>
+            <child link="caster_stand_right_link"/>
+            <origin xyz="0.0195 0.0 0.01325"/>
+        </joint>
+
+        <link name="caster_stand_left_link">
+            <inertial>
+                <xacro:inertia_cylinder m="0.02" r="0.0028" h="0.0336"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/caster_stand.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.0028" length="0.0336"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="caster_stand_left_joint" type="fixed">
+            <parent link="caster_wheel_link"/>
+            <child link="caster_stand_left_link"/>
+            <origin xyz="-0.0195 0.0 0.01325"/>
+        </joint>
+
+        <!-- Gazebo Caster -->
+        <gazebo reference="caster_wheel_link">
+            <mu1>0.0</mu1>
+            <mu2>0.0</mu2>
+        </gazebo>
+
+    </xacro:macro>
+
+</robot>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="wheel" params="suffix parent reflect dir">
+
+
+        <!-- Wheel Support -->
+        <link name="${suffix}_wheel_stand_link">
+            <inertial>
+                <xacro:inertia_box m="0.01" x="0.01" y="0.01" z="0.01"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/wheel_stand_${dir}.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.01 0.01 0.01"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${suffix}_wheel_stand_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${suffix}_wheel_stand_link"/>
+            <origin xyz="${reflect * 0.06} -0.0125 0.0032" rpy="0.0 0.0 0.0"/>
+        </joint>
+
+        <!-- Wheel Geared Motor -->
+        <link name="${suffix}_wheel_motor_link">
+            <inertial>
+                <xacro:inertia_box m="0.1" x="0.0184" y="0.074" z="0.0225"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/motor_${dir}.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.02 0.0"/>
+                <geometry>
+                    <box size="0.0184 0.074 0.0225"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${suffix}_wheel_motor_joint" type="fixed">
+            <parent link="${suffix}_wheel_stand_link"/>
+            <child link="${suffix}_wheel_motor_link"/>
+            <origin xyz="${reflect * 0.01125} -0.02 -0.0155" rpy="0.0 0.0 0.0"/>
+        </joint>
+
+        <!-- Wheel Motor Axis -->
+        <link name="${suffix}_wheel_axis_link">
+            <inertial>
+                <origin rpy="0.0 ${M_PI/2} 0.0"/>
+                <xacro:inertia_cylinder m="0.05" r="0.0036" h="0.0373"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/axis.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="0.0 ${M_PI/2} 0.0"/>
+                <geometry>
+                    <cylinder radius="0.0036" length="0.0373"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${suffix}_wheel_axis_joint" type="continuous">
+            <parent link="${suffix}_wheel_motor_link"/>
+            <child link="${suffix}_wheel_axis_link"/>
+            <origin rpy="0.0 0.0 0.0"/>
+            <axis xyz="-1 0.0 0.0"/>
+        </joint>
+
+        <!-- Wheel Axle -->
+        <link name="${suffix}_wheel_axle_link">
+            <inertial>
+                <origin rpy="0.0 ${M_PI/2} 0.0"/>
+                <xacro:inertia_cylinder m="0.05" r="0.0325" h="0.0282"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <mesh filename="package://robot_description/meshes/wheel_${dir}.dae"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="0.0 ${M_PI/2} 0.0"/>
+                <geometry>
+                    <cylinder radius="0.0325" length="0.0282"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${suffix}_wheel_axle_joint" type="fixed">
+            <parent link="${suffix}_wheel_axis_link"/>
+            <child link="${suffix}_wheel_axle_link"/>
+            <origin xyz="${reflect * 0.028} 0.0 0.0"/>
+            <origin rpy="0.0 0.0 0.0"/>
+        </joint>
+
+        <!-- Gazebo Transmission -->
+        <transmission name="${suffix}_wheel_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${suffix}_wheel_axis_joint">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${suffix}_wheel_axis">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+    </xacro:macro>
+
+</robot>
