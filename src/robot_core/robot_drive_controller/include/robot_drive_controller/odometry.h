@@ -28,6 +28,7 @@ class Odometry {
   // Parameters related wheel
   double wheel_radius_;
   double wheel_separation_;
+  int skip = 0;
   // Structs
   struct Odom {
     // Pose
@@ -42,6 +43,7 @@ class Odometry {
   };
   // Variables
   Odom odom_;
+  Odom old_odom_;
   // Temporal variables
   double right_wheel_pos_prev;
   double left_wheel_pos_prev;
